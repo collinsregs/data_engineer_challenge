@@ -6,7 +6,7 @@ This project implements a scalable data pipeline that ingests data from a simula
 
 ## Project Structure
 
-.
+.  
 ├── data_ingestion/                  # Data ingestion and processing scripts  
 │   ├── ingest_to_bronze.py          # Script to download data from SFTP  
 │   └── process_data_to_silver.py    # Script to process data and store in SQLite  
