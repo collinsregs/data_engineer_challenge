@@ -5,22 +5,22 @@
 This project implements a scalable data pipeline that ingests data from a simulated SFTP location, processes it for analytics, and provides access through an API with date-based filtering and cursor-based pagination.
 
 ## Project Structure
-
-.  
-├── data_ingestion/                  # Data ingestion and processing scripts  
-│   ├── ingest_to_bronze.py          # Script to download data from SFTP  
-│   └── process_data_to_silver.py    # Script to process data and store in SQLite  
-├── sftp_setup/                      # SFTP server setup and test data generation  
-│   ├── fake_sftp_data               # holds test data for sftp access  
-│   ├── generate_test_data.py        # Script to generate test data  
-│   └── start_sftp.py                # Script to start a simple SFTP server  
-├── data/                            # Directory for storing downloaded data               
-├── database.db                      # SQLite database for storing processed data  
-├── requirements.txt                 # Python package dependencies  
-├── setup.py                         # Script to set up the environment and run all servers  
-├── api.py                           # Flask API server  
-└── pipeline.py                      # Script to run the data pipeline  
-
+```
+.
+├── data_ingestion/           # Data ingestion and processing scripts
+│   ├── ingest_to_bronze.py   # Script to download data from SFTP
+│   └── process_data_to_silver.py # Script to process data and store in SQLite
+├── sftp_setup/               # SFTP server setup and test data generation
+│   ├── fake_sftp_data        # holds test data for sftp access
+│   ├── generate_test_data.py # Script to generate test data
+│   └── start_sftp.py         # Script to start a simple SFTP server
+├── data/                     # Directory for storing downloaded data
+├── database.db               # SQLite database for storing processed data
+├── requirements.txt          # Python package dependencies
+├── setup.py                  # Script to set up the environment and run all servers
+├── api.py                    # Flask API server
+└── pipeline.py               # Script to run the data pipeline
+```
 
 ## Setup
 
