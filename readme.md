@@ -27,8 +27,8 @@ This project implements a scalable data pipeline that ingests data from a simula
 1.  **Clone the Repository:**
 
     ```bash
-    git clone <repository_url>
-    cd <repository_directory>
+    git clone https://github.com/collinsregs/data_engineer_challenge.git
+    cd data_engineer_challenge
     ```
 
 2.  **Run Setup Script:**
