@@ -12,6 +12,7 @@ import threading
 
 HOST, PORT = 'localhost', 22
 BACKLOG = 10
+KEY = os.path.abspath(os.path.join(os.path.dirname(__file__),  "test_rsa.key"))
 
 class ConnHandlerThd(threading.Thread):
     def __init__(self, conn, keyfile):
@@ -74,7 +75,7 @@ def main():
         )
 
     options, args = parser.parse_args()
-    options.keyfile = "test_rsa.key"
+    options.keyfile = KEY
 
     if options.keyfile is None:
         parser.print_help()

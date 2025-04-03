@@ -5,7 +5,7 @@ import json
 import random
 import datetime
 
-DATA_DIR = "fake_sftp"  
+DATA_DIR = "../fake_sftp_data"  
 num_products =20
 num_days= 100
 

@@ -1,2 +1,4 @@
 /data
-/fake_sftp_data
+/sftp_setup/fake_sftp_data
+/__pycache__/
+*.pyc
