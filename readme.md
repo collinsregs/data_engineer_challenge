@@ -119,10 +119,10 @@ curl -u admin:password123 http://localhost:5000/products
 ```
 ## Assumptions
 
-* **SFTP Server:** A simple SFTP server is simulated for demonstration purposes. It is assumed that in a real-world scenario, a robust SFTP server would be available. Any username and password will work on this simulated server.
-* **Data Source:** Sample CSV and JSON data files are generated for testing. In a real-world scenario, the data source would be a defined SFTP location with specific data formats.
-* **Data Cleaning:** Basic data cleaning is performed to demonstrate the process. In a real-world scenario, more complex data quality measures might be necessary.
-* **Security:** Basic security measures are implemented (rate limiting, basic authentication). In a production environment, more robust security measures would be required (e.g.more complex authentication(API keys, tokens) authorization).
-* **Error Handling:** Basic error handling is implemented. More comprehensive error handling and logging would be necessary in a production environment.
-* **Database:** SQLite is used for simplicity. In a production environment, a more scalable database system might be necessary.
-* **Environment:** It is assumed that the user has python 3.7 or higher installed, and pip.
+* **SFTP Server:** It is assumed that a robust SFTP server would be available in a real-world scenario. A simple SFTP server is simulated for demonstration purposes. Any username and password will work on this simulated server.
+* **Data Source:** It is assumed that the data source would be a defined SFTP location with specific data formats in a real-world scenario. Sample CSV and JSON data files are generated for testing. It is further assumed that each file type consistently corresponds to a single data type.
+* **Data Cleaning:** It is assumed that more complex data quality measures might be necessary in a real-world scenario. Basic data cleaning is performed to demonstrate the process.
+* **Security:** It is assumed that more robust security measures (e.g., more complex authentication (API keys, tokens), authorization) would be required in a production environment. Basic security measures are implemented (rate limiting, basic authentication).
+* **Error Handling:** It is assumed that more comprehensive error handling and logging would be necessary in a production environment. Basic error handling is implemented.
+* **Database:** It is assumed that a more scalable database system might be necessary in a production environment. SQLite is used for simplicity.
+* **Environment:** It is assumed that the user has Python 3.7 or higher installed, and pip.

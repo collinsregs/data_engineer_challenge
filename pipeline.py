@@ -6,8 +6,9 @@ DB_PATH = "database.db"
 LOCAL_DATA_DIR = "data"
 
 
+
 def run_pipeline():
-    ingest()
+    ingest(LOCAL_DATA_DIR)
     process_data(LOCAL_DATA_DIR,DB_PATH)
 
 if __name__ == "__main__":

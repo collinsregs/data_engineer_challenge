@@ -5,9 +5,9 @@ import json
 import random
 import datetime
 
-DATA_DIR = "../fake_sftp_data"  
-num_products =20
-num_days= 100
+DATA_DIR = "sftp_setup/fake_sftp_data"  
+num_products =50
+num_days= 200
 
 def generate_sales_data(date, num_records=100):
     filename = f"sales_data_{date.strftime('%Y-%m-%d')}.csv"

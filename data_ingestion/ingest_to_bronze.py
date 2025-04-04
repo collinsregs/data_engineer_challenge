@@ -9,8 +9,8 @@ SFTP_HOST = "localhost"
 SFTP_PORT = 22
 SFTP_USER = "demo"
 SFTP_PASS = "password"
-SFTP_REMOTE_DIR = "/fake_sftp_data"
-LOCAL_DATA_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "data"))
+SFTP_REMOTE_DIR = "sftp_setup/fake_sftp_data"
+
 
 def connect_sftp():
     try:
@@ -34,11 +34,11 @@ def download_sftp_files(sftp, remote_dir, local_dir):
     except Exception as e:
         print(f"Error downloading files: {e}")
 
-def ingest():
+def ingest(data_dir):
     sftp, transport = connect_sftp()
     print('connected to sftp server')
     if sftp:
-        download_sftp_files(sftp, SFTP_REMOTE_DIR, LOCAL_DATA_DIR)
+        download_sftp_files(sftp, SFTP_REMOTE_DIR, data_dir)
         print('downloaded sftp files')
         sftp.close()
         transport.close()

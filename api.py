@@ -14,7 +14,7 @@ API_RATE_LIMIT = 100  # Requests per minute
 request_counts = {}
 def check_auth(username, password):
     """This function checks if the username / password combinations are valid."""
-    return username == 'admin' and password == 'password123' #Replace with your desired username and password.
+    return username == 'admin' and password == 'password123' 
 
 def authenticate():
     """Sends a 401 response that enables basic auth"""
@@ -176,7 +176,7 @@ def get_filtered_sales():
     product_filter = request.args.get('product_id')
     limit = int(request.args.get('limit', 10))
     cursor_val = request.args.get('cursor')
-    query = "SELECT rowid, sale_id, product_id, sale_date, quantity, price FROM sales WHERE 1=1"
+    query = "SELECT rowid, sale_id, product_id, sale_date, quantity, price, category_id FROM sales WHERE 1=1"
     params = []
 
     if date_filter:
@@ -191,7 +191,7 @@ def get_filtered_sales():
 
     rows, next_cursor = fetch_paginated_data(query, params, limit, cursor_val)
     return jsonify({
-        'filtered_sales': [{'rowid': s[0], 'sale_id': s[1], 'product_id': s[2], 'sale_date': s[3], 'quantity': s[4], 'price': s[5]} for s in rows],
+        'filtered_sales': [{'rowid': s[0], 'sale_id': s[1], 'product_id': s[2], 'sale_date': s[3], 'quantity': s[4], 'price': s[5], 'category':s[6]} for s in rows],
         'next_cursor': next_cursor
     })
 
